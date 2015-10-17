@@ -1,0 +1,23 @@
+<div id="profile">
+    <div class="user-info"><span><%= user %></span></div>
+    <ul id="schedulelist">
+        <li><h2><img src="css/lib/img/smaller-icon1.png">Events</h2></li>
+        <li><button class="createNewEvent"><span class="glyphicon glyphicon-plus"></span><span>Create a new event</span></button></li>
+        <% _.each(events, function(event) { %>
+        <li><button class="editEvent" data-objid="<%= event.objid %>"><span><%= event.startDate.toString().substring(4, 9) %></span><span><%= event.summary %></span></button></li>
+        <% }); %>
+    </ul>
+    <ul id="grouplist">
+        <li><h2><img src="css/lib/img/smaller-icon2.png">Groups</h2></li>
+        <li><button class="createNewGroup"><span class="glyphicon glyphicon-plus"></span><span>Create a new group</span></button></li>
+        <% _.each(groups, function(group) { %>
+        <li><button class="editGroup" data-obj="<%= group.objectid %>"><span><img src="<%= group.stupidbg %>"></span><span><%= group.name %></span></button></li>
+        <% }); %>
+    </ul>
+    <ul id="notification">
+        <li><h2><img src="css/lib/img/smaller-icon3.png">Notification</h2></li>
+        <li><img src="css/lib/img/notification1.png">&nbsp;Eric commented on Holiday brunch event</li>
+        <li><img src="css/lib/img/notification2.png">&nbsp;John is attending Launch Hackathon</li>
+        <li><img src="css/lib/img/notification3.png">&nbsp;Chris added you to his group</li>
+    </ul>
+</div>

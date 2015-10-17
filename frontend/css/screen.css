@@ -1,0 +1,35 @@
+/** Small device **/
+@media (max-width: 648px) {
+    #header,
+    #content {
+        width: 100%;
+    }
+}
+/** Large device and screen **/
+@media screen and (min-width: 768px) {
+    #header,
+    #content {
+        margin: auto;
+    }
+}
+body {
+    background: url("lib/img/profile-bg.png");
+    background-repeat: no-repeat;
+    font-family: lato, sans-serif !important;
+    border-top: 3px solid #e72838;
+}
+
+h1 {
+    color: #f15252;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.hidden {
+    display: none;
+}

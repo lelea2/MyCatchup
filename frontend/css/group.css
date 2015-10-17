@@ -1,0 +1,78 @@
+#group-create #friendlist li {
+    display: inline-block;
+    width: 22%;
+    float: left;
+    margin: 10px;
+    overflow: hidden;
+}
+
+#group-create #friendlist {
+    display: block;
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-left: 15px;
+}
+
+#group-create #friendlist label {
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#group-create #friendlist img {
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#group-create #friend-filter {
+    background: url("lib/img/search.png");
+    background-repeat: no-repeat;
+    background-position: 267px 7px;
+}
+#group-create .form-group {
+    width: 30%;
+    margin-right: 20px;
+}
+
+#group-create h1 {
+    color: #96d6f2;
+    background: url("lib/img/dot.png");
+    background-repeat: repeat-x;
+    background-position: 0 12px;
+    font-size: 24px;
+}
+
+#group-create h1 span {
+    background: #FFF;
+    padding: 0 13px;
+}
+
+#group-create h1 span span {
+    font-family: satisfy, cursive !important;
+    font-size: 30px;
+}
+
+.createGroup {
+    background-color: #96d6f2;
+    width: 180px;
+}
+
+#group-create .form-group {
+    border: 1px solid #fde796;
+    border-radius: 6px;
+}
+
+.groupList {
+    margin-left: 10%;
+}
+
+@media (max-width: 648px) {
+    #group-create #friendlist li {
+        width: 45%;
+        float: left;
+        overflow: hidden;
+    }
+}

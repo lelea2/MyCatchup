@@ -1,0 +1,6 @@
+<li data-uid='<%= item.get("id") %>'>
+    <input type="checkbox" id="user-<%= item.get('id') %>">
+    <label for="user-<%= item.get('id') %>">
+        <img src="<%= item.get("prefixlink") + item.get("id") + '/picture' %>"><%= item.get("name") %>
+    </label>
+</li>

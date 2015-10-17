@@ -1,0 +1,21 @@
+#header .navbar-brand img {
+    width: 148px;
+    height: 40px;
+}
+
+#header .navbar-nav a {
+    color: #fff;
+}
+
+#header .user-img {
+    width: 100%;
+    text-align: center;
+}
+
+#header .user-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: 105px;
+}

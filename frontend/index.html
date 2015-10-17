@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>CatchUp | Hackathon Project</title>
+<link rel="icon" type="image/png" href="css/lib/img/favicon.png">
+<link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/screen.css">
+<script src="//use.edgefonts.net/satisfy;lato.js"></script>
+<!--Loading googleMap API -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+</head>
+<body>
+<div class="container">
+    <!-- Static header -->
+    <div id="header"></div>
+    <!-- Content placeholder -->
+    <div id="content"></div>
+    <div id="footer"></div>
+</div>
+<div id="fb-root"></div>
+<!--<script data-main="js/concatenated-uglified-nolicense" src="js/lib/require.js"></script>-->
+<script src="js/lib/parse.js"></script>
+<script>
+    Parse.initialize("RqEcKnZnSyne2fZ4nhQvHesmz35rFnDw9upR7YBC", "reBrB5o7NfgnrTE6KddPp85VRrwd8TPBKq9HWiHM");
+</script>
+<!-- Script for loading facebook all.js script -->
+<script src="//connect.facebook.net/en_US/all.js" async="async"></script>
+<script>
+        //FB parse initialize
+    window.fbAsyncInit = function() {
+         // init the FB JS SDK
+        Parse.FacebookUtils.init({
+            appId      : '167575003441165',                        // App ID from the app dashboard
+            channelUrl : 'http://simplecatchup.com', // Channel file for x-domain comms
+            cookie     : true
+        });
+    };
+</script>
+<!-- Load script  "js/main.js" as our entry point -->
+<script data-main="js/main" src="js/lib/require.js"></script>
+<!--Loading google API -->
+<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<script>
+function handleClientLoad() {
+    var apiKey = 'AIzaSyA3OBxfne-TdW0b1dGUY5c4rqIYtnW_BZQ';
+    gapi.client.setApiKey(apiKey);
+}
+</script>
+</body>
+</html>

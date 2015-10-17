@@ -1,0 +1,71 @@
+#profile .user-info {
+    width: 100%;
+    background: url("lib/img/dot.png");
+    background-repeat: repeat-x;
+    text-align: center;
+    background-position: 0 16px;
+    margin-top: 20px;
+}
+
+#profile .user-info span {
+    background-color: #FFF;
+    color: #96d6f2;
+    font-size: 24px;
+    padding: 0 16px;
+}
+
+#profile ul {
+    float: left;
+    width: 32%;
+    margin-right: 10px;
+    line-height: 21px;
+}
+
+#profile ul li:first-child {
+    color: #e72838;
+    font-size: 20px;
+}
+
+#profile ul li {
+    margin: 15px auto;
+}
+
+#profile ul li button {
+    width: 230px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #fde796;
+}
+#profile ul li button span {
+    float: left;
+    padding-top: 14px;
+    overflow: hidden;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+#profile ul li button span:first-child {
+    background: #fde796;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-top: -4px;
+    border-radius: 6px 0 0 6px;
+    margin-left: -6px;
+    padding-top: 12px;
+    color: #FFF;
+    font-size: 24px;
+}
+#profile #grouplist button img {
+    margin-top: -11px;
+}
+#profile h2 {
+    font-size: 20px;
+}
+@media (max-width: 648px) {
+    #profile ul {
+        width: 100%;
+        float: left;
+    }
+}

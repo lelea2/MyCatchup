@@ -1,0 +1,24 @@
+<div class="navbar navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <% if (user) { %>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <% } %>
+            <a id="home" class="navbar-brand" href="#"><img src="css/lib/img/logo.png"></a>
+        </div>
+        <% if(user) { %>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="signout" href="#">Sign Out</a></li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+        <% } %>
+    </div>
+</div>
+<% if (user) %>
+<div class="user-img"><img src="<%= user.get("prefixlink") + user.get("userId") + '/picture' %>"></div>

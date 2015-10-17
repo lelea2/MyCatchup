@@ -1,0 +1,140 @@
+#intro {
+    margin: auto;
+    margin-top: 35px;
+    width: 100%;
+}
+#intro p {
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+}
+.google #intro p {
+    color: #434244;
+}
+.container.marketing h2 {
+    margin-top: 5px;
+}
+
+#intro h1 {
+    font-size: 33px;
+    color: #B8D960;
+}
+#intro h1 span {
+    font-family: satisfy, cursive !important;
+    font-size: 41px;
+}
+body.facebook {
+    border-top: 3px solid #e42837;
+    background: url("lib/img/facebook-bg.png");
+    background-repeat: no-repeat;
+    height: 500px;
+}
+body.google {
+    border-top: 3px solid #e42837;
+    background: url("lib/img/google-bg.png");
+    background-repeat: repeat-x;
+    background-size: 2000px 350px;
+    height: 500px;
+}
+button.facebook-reg {
+    background: url("lib/img/facebook-button.png");
+    height: 45px;
+    width: 260px;
+    margin-top: 30px;
+    border: none;
+}
+button.googleSync {
+    background: url("lib/img/Google-button.png");
+    height: 45px;
+    width: 292px;
+    margin-top: 30px;
+    border: none;
+}
+
+/** BOOTSTRAP CSS **/
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 110px;
+}
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-left:  15px;
+    padding-right: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-left:  0;
+    padding-right: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}

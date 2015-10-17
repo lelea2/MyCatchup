@@ -1,0 +1,123 @@
+#schedule-create #friendlist li {
+    display: inline-block;
+    width: 22%;
+    float: left;
+    margin: 10px;
+    overflow: hidden;
+}
+#schedule-create .dropdown-menu > li > a:hover {
+	background-color:  #FEE176;
+	color: black;
+}
+
+#schedule-create button {
+    border-color: #FDE796;
+}
+
+#schedule-create .vert-column.who-info .create-group-link a {
+    border-bottom: 1px solid #FDE796;
+    color: #000000;
+}
+
+#schedule-create .vert-column.who-info .create-group-link  a:hover {
+    border-bottom: 1px solid #FDE796;
+    color: #000000;
+    text-decoration: none;
+}
+
+#schedule-create .create-group-link {
+    margin-left: 11px;
+    margin-top: 5px;
+}
+
+#schedule-create button#catchup {
+    background-color: #96D6F2;
+    border: medium none;
+    font-weight: bold;
+    margin-top: 65px;
+    width: 258px;
+}
+
+#schedule-create .friends_welcome_container {
+	margin-top: 40px;
+}
+
+#schedule-create h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#schedule-create .btn-group {
+    width: 100%;
+}
+
+#schedule-create #eventDescription {
+    height: 150px;
+}
+
+#schedule-create .our_btn {
+    text-align: left;
+    width: 60%;
+}
+#schedule-create .form-control {
+    border-color: #FDE796;
+    margin-bottom: 11px;
+    width: 257px;
+}
+
+#schedule-create .vert-column.when-info > ul {
+    padding-left: 0;
+}
+
+#schedule-create label {
+    font-weight: normal;
+    padding-left: 4px;
+}
+
+#schedule-create .tod-label {
+	margin-top: 0px;
+}
+
+#schedule-create h1 {
+    color: #96d6f2;
+    background: url("lib/img/dot.png");
+    background-repeat: repeat-x;
+    background-position: 0 12px;
+    font-size: 24px;
+    font-family: lato,sans-serif !important;
+}
+
+#schedule-create h1 span {
+    background: #FFF;
+    padding: 0 13px;
+}
+
+#schedule-create h1 span span {
+    font-family: satisfy, cursive !important;
+    font-size: 30px;
+}
+
+#schedule-create .vert-column {
+    float: left;
+    min-height: 650px;
+    padding-left: 57px;
+    width: 33%;
+}
+
+#schedule-create h2 {
+    color: #e72838;
+    font-size: 20px;
+}
+
+@media (max-width: 648px) {
+    #schedule-create .vert-column {
+        width: 100%;
+        float: left;
+        overflow: hidden;
+    }
+}
+
+
+#schedule-create .clear_both {
+	clear: both;
+}

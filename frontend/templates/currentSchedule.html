@@ -1,0 +1,31 @@
+<div id="current-schedule">
+    <h1><span><%= schedule.name %></span></h1>
+    <div class="left">
+        <h2><%= startDate %></h2>
+        <p class="time"><%= time %></p>
+        <p class="place"><%= schedule.location.address %><p>
+        <button class="join btn">Join</button>
+        <button class="maybe btn">Maybe</button>
+        <button class="sorry btn">Sorry</button>
+        <p class="summary"><%= schedule.details %></p>
+    </div>
+    <div class="middle">
+        <h2><%= schedule.groupName %></h2>
+        <div class="join-section">Will be there</div>
+        <% _.each(schedule.friendlist.split(","), function(friend) { 
+            url = "https://graph.facebook.com/" + friend + "/picture"; %>
+            <span><img src="<%= url %>"></span>
+        <% }) %>
+    </div>
+    <div class="right">
+        <h2>Plan more details</h2>
+        <p class="namelist"><input type="text" placeholder="Name of your list"></p>
+        <hr/>
+        <ul class="items">
+            <li><input type="checkbox"><input type="text" placeholder="type an item here"></li>
+            <li><input type="checkbox"><input type="text" placeholder="type an item here"></li>
+            <li><input type="checkbox"><input type="text" placeholder="type an item here"></li>
+        </ul>
+    </div>
+</div>
+<div class="fb-comments" data-href="http://example.com/comments" data-numposts="5"></div>

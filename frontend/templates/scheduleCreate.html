@@ -1,0 +1,125 @@
+<div id="schedule-create">
+    <h1><span><span>Plan a</span>CatchUp</span></h1>
+
+    <div class="column-container">
+       <div class="vert-column who-info">
+                <h2><img src="css/lib/img/smaller-icon2.png">Tell us who</h2>
+                <!-- Split button -->
+                <div class="btn-group">
+                  <button type="button" id="who-label" class="btn btn-default our_btn">Pick a group</button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" id="who-dropdown" role="menu">
+                    <% _.each(groups, function(group) { %>
+                        <li><a data-groupid="<%= group.objectid %>" data-friendlist="<%= group.friendList.join(",") %>" href="#"><%= group.name %></a></li>
+                    <% }); %>
+                  </ul>
+                </div>
+
+                <p class="create-group-link" >or <a href="/createGroup">create a new group</a>
+                <div class="friends_welcome_container">
+                    <input id="friends_welcome" name="friends_welcome" type="checkbox"/>
+                    <label for="friends_welcome">Friends are welcome</label>
+                </div>
+
+            </div>
+            <!-- end column-->
+
+            <div class="vert-column when-info">
+                <h2><img src="css/lib/img/smaller-icon1.png">Tell us when</h2>
+                <h3 class="tod-label">What day of the week?</h3>
+                <!-- Split button -->
+                <div class="btn-group">
+                  <button type="button" id="week-label" class="btn btn-default our_btn">Week</button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" id="day-of-week" role="menu">
+                    <li><a data-day="0" href="#">Anytime</a></li>
+                    <li><a data-day="1" href="#">Weekdays</a></li>
+                    <li><a data-day="2" href="#">Weekends</a></li>
+                  </ul>
+                </div>
+
+                <h3>What time of the day?</h3>
+
+                <ul>
+                    <li>
+                          <input id="morning" name="morning" type="checkbox"/>
+                        <label for="morning">Early morning (5 - 9 am)</label>          
+                    </li>
+                    <li>
+                         <input id="brunch" name="brunch" type="checkbox"/>
+                        <label for="brunch">Brunch (9 - 11 am)</label>
+                    </li>
+                    <li>
+                         <input id="lunch" name="lunch" checked type="checkbox"/>
+                        <label for="lunch">Lunch (11 - 1 pm)</label>
+                    </li>
+                    <li>
+                                   <input id="afternoon" name="afternoon" type="checkbox"/>
+                        <label for="afternoon">Afternoon (1 - 5 pm)</label> 
+                    </li>
+                    <li>
+                                    <input id="dinner" checked name="dinner" type="checkbox"/>
+                        <label for="dinner">Dinner (5 - 9 pm)</label>
+                    </li>
+                    <li>
+                        <input id="evening" name="evening" type="checkbox"/>
+                        <label for="evening">Evening (9-12 pm)</label>
+                    </li>
+                </ul>
+                <h3>How long?</h3>
+                <!-- Split button -->
+                <div class="btn-group">
+                  <button type="button" id="how-long-label" class="btn btn-default our_btn">Duration</button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" id="how-long-dropdown" role="menu">
+                    <li><a data-howlong="1" href="#">1 hour</a></li>
+                    <li><a data-howlong="2" href="#">2 hours</a></li>
+                    <li><a data-howlong="3" href="#">3 hours</a></li>
+                    <li><a data-howlong="12" href="#">Half-day</a></li>
+                    <li><a data-howlong="24" href="#">All-day</a></li>
+                  </ul>
+                </div>
+            </div>
+            <!-- end column-->
+
+        <div class="vert-column info-info">
+            <h2><img src="css/lib/img/smaller-icon4.png">Plan the details</h2>
+
+            <input id="eventName" class="form-control" placeholder="Event name">
+            <textarea id="eventDescription" class="form-control" placeholder="Details"></textarea>
+            <div id="panel">
+                <input id="locationField" class="form-control" type="text" size="50">
+            </div> 
+
+            <button type="button" class="btn btn-success" id="catchup">CatchUp</button>
+        </div>
+        <!-- end column-->   
+        <div class="clear_both"></div>     
+    </div>
+
+     
+</div>
+<script>
+    if(navigator.geolocation) {
+        browserSupportFlag = true;
+        navigator.geolocation.getCurrentPosition(function(position) {
+            initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+            var southWest = new google.maps.LatLng( initialLocation.lat() - 1, initialLocation.lng() - 1 );
+            var northEast = new google.maps.LatLng( initialLocation.lat() - 1, initialLocation.lng() - 1 );
+            var currentBounds = new google.maps.LatLngBounds( southWest, northEast );
+            var input = (document.getElementById('locationField'));
+            autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.setBounds(currentBounds);
+        }, function() {
+        });
+    }
+</script>

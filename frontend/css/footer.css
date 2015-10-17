@@ -1,0 +1,16 @@
+#footer .marketing h2 {
+    font-weight: bold;
+    font-size: 22px;
+    color: #E72838;
+}
+
+#footer .marketing p {
+    font-size: 14px;
+    color: #040405;
+}
+
+#footer .copyright {
+    width: 100%;
+    height: 40px;
+    background-color: #96d6f2;
+}S
